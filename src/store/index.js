@@ -25,7 +25,7 @@ export default createStore({
 				names = names.map((s) => s.name).toString();
 				axios
 					.get(
-						`https://min-api.cryptocompare.com/data/pricemulti?fsyms=${names}&tsyms=USD&api_key=933d62f7f27e79609ce95042179747ebce1661878058a752881b290ce52ff044`
+						`https://min-api.cryptocompare.com/data/pricemulti?fsyms=${names}&tsyms=USD&api_key=${API_KEY}`
 					)
 					.then((res) => {
 						context.commit('updateCryptoList', res.data);
